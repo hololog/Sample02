@@ -26,7 +26,7 @@ public class PostsService {
         Posts posts = postsRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당게시글이 없습니다.id="+id));
         //조회글 수정 => 쿼리를 날리지 않음(entity객체의 값만 변경되면 DB도 자동 변경됨)
-        posts.update(requestDto.getTitie(), requestDto.getContent());
+        posts.update(requestDto.getTitle(), requestDto.getContent());
         
         return id;
     }

@@ -8,12 +8,12 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor //기본생성자만 =>빌더패턴이용
 public class PostsUpdateRequestDto {
-    private String titie;
+    private String title;
     private String content;
 
     @Builder
     public PostsUpdateRequestDto(String title, String content){
-        this.titie = title;
+        this.title = title;
         this.content = content;
     }
 }

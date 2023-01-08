@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Getter //모든필드 Getter생성
 @NoArgsConstructor //기본생성자 추가
 @Entity //테이블과 링크 나타냄(클래스명=테이블명(스네이크케이스))
-public class Posts {
+public class Posts extends BaseTimeEntity {
     
     @Id // 테이블의 pk필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // pk생성규칙
